@@ -79,7 +79,7 @@ class Bucket {
         let type = options.layer.type;
         if (type === 'fill' && (!options.layer.isPaintValueFeatureConstant('fill-extrude-height') ||
             !options.layer.isPaintValueZoomConstant('fill-extrude-height') ||
-            options.layer.getPaintValue('fill-extrude-height') !== 0)) {
+            options.layer.getPaintValue('fill-extrude-height', {}) !== 0)) {
             type = 'fillextrusion';
         }
 
